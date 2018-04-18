@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Albums</h1>
+  <h1>Artists</h1>
 
   <p><%= link_to "Add New Album", new_album_path %></p>
 
@@ -7,8 +7,7 @@
   <% @albums.each do |album| %>
       <div class="card">
         <h3><em><%= link_to album.artist_name, album_path(album) %></em></h3>
-        <p><%= album.album_name %></p>
-        <p><%= album.genre %></p>
+
       </div>
   <% end %>
 </div>
