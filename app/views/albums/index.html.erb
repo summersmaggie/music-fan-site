@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Albums</h1>
+
+  <% @albums.each do |album| %>
+      <div class="card">
+        <h3><%= album.artist_name %></h3>
+        <p><%= album.album_name %></p>
+        <p><%= album.genre %></p>  
+      </div>
+  <% end %>
+
+</div>
