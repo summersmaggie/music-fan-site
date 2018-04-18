@@ -9,7 +9,8 @@ class AlbumsController < ApplicationController
 
   def show
    @album = Album.find(params[:id])
-   render :show
+   @songs = Song.all
+   @song = Song.find(@album.id)
  end
 
   def create
