@@ -4,7 +4,7 @@
   <p><%= link_to "Add New Album", new_album_path %></p>
 
 
-  <% @albums.each do |album| %>
+  <% @alphabetize_albums.each do |album| %>
       <div class="card">
         <h3><em><%= link_to album.artist_name, album_path(album) %></em></h3>
 

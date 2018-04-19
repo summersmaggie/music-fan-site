@@ -1,6 +1,7 @@
 class AlbumsController < ApplicationController
   def index
     @albums = Album.all
+    @alphabetize_albums = @albums.alphabetize
   end
 
   def new
@@ -14,6 +15,7 @@ class AlbumsController < ApplicationController
    @reviews = Review.all
    @review = Review.find(@album.id)
    @ten_most_recent = Review.ten_most_recent
+
  end
 
   def create
