@@ -27,7 +27,7 @@
     <h4>Reviews:</h4>
 
     <ol>
-    <% @reviews.each do |review| %>
+    <% @album.reviews.each do |review| %>
       <p><%= review.username %></p>
       <p><%= review.content %></p>
       <p><%= review.rating %></p>
