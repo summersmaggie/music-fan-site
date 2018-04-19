@@ -15,14 +15,22 @@
     <p><%= link_to "Add a Song", new_album_song_path(@album) %></p>
   <% end %>
 
+  <p>Last Ten Reviews:</p>
+  <% @ten_most_recent.each do |review| %>
+    <p><%= review.username %></p>
+    <p><%= review.content %></p>
+    <p><%= review.rating %></p>
+  <% end %>
+
+
   <% if @album.reviews.any? %>
     <h4>Reviews:</h4>
-    
+
     <ol>
     <% @reviews.each do |review| %>
-      <p><%= @review.username %></p>
-      <p><%= @review.content %></p>
-      <p><%= @review.rating %></p>
+      <p><%= review.username %></p>
+      <p><%= review.content %></p>
+      <p><%= review.rating %></p>
     <% end %>
     </ol>
   <% else %>
