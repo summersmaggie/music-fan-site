@@ -2,13 +2,22 @@
   <h3><em><%= @album.artist_name %></em></h3>
   <h4>Album Name:</h4><p><%= @album.album_name %></p>
   <h4>Genre:</h4><p><%= @album.genre %></p>
-  <h4>Songs:</h4>
-  <ol>
-  <% 10.times do |song| %>
-    <li><%= @song.title %></li>
+
+  <% if @album.songs.any? %>
+    <h4>Songs:</h4>
+
+    <ol>
+    <% 10.times do |song| %>
+      <li><%= @song.title %></li>
+    <% end %>
+    </ol>
+  <% else %>
+    <p><%= link_to "Add a Song", new_album_song_path(@album) %></p>
   <% end %>
-  </ol>
 
   <p><%= link_to "Back to Artist", root_path %></p>
   <p><%= link_to "Edit Artist", edit_album_path %></p>
+  <p><%= link_to "Delete Artist", album_path(@album),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
 </div>

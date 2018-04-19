@@ -1,0 +1,9 @@
+<%= render "layouts/errors", :object => @song %>
+
+<%= form_for [@album, @song], url: {action: "create"} do |f| %>
+  <%= f.hidden_field :album_id, :value => params[:album_id] %>
+  <%= f.hidden_field :album_name, :value => params[:album_name] %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <p><%= f.submit  %></p>
+<% end %>
