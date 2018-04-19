@@ -1,0 +1,11 @@
+<%= render "layouts/errors", :object => @review %>
+
+<%= form_for [@album, @review], url: {action: "create"} do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <%= f.label :content, 'Comment' %>
+  <%= f.text_field :content%>
+  <%= f.label :rating, "Rating 1-5 (1 being the worst, 5 being the best)" %>
+  <%= f.text_field :rating%>
+  <p><%= f.submit  %></p>
+<% end %>

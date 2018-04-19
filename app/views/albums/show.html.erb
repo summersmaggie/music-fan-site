@@ -15,6 +15,20 @@
     <p><%= link_to "Add a Song", new_album_song_path(@album) %></p>
   <% end %>
 
+  <% if @album.reviews.any? %>
+    <h4>Reviews:</h4>
+    
+    <ol>
+    <% @reviews.each do |review| %>
+      <p><%= @review.username %></p>
+      <p><%= @review.content %></p>
+      <p><%= @review.rating %></p>
+    <% end %>
+    </ol>
+  <% else %>
+    <p><%= link_to "Add a Review", new_album_review_path(@album) %></p>
+  <% end %>
+
   <p><%= link_to "Back to Artist", root_path %></p>
   <p><%= link_to "Edit Artist", edit_album_path %></p>
   <p><%= link_to "Delete Artist", album_path(@album),

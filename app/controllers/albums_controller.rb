@@ -11,6 +11,8 @@ class AlbumsController < ApplicationController
    @album = Album.find(params[:id])
    @songs = Song.all
    @song = Song.find(@album.id)
+   @reviews = Review.all
+   @review = Review.find(@album.id)
  end
 
   def create
