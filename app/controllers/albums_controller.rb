@@ -2,6 +2,7 @@ class AlbumsController < ApplicationController
   def index
     @albums = Album.all
     @alphabetize_albums = @albums.alphabetize
+    @most_reviews = @albums.most_reviews
   end
 
   def new

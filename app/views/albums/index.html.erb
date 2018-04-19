@@ -10,4 +10,14 @@
 
       </div>
   <% end %>
+
+  <h4>Most reviewed albums:</h4>
+  <% @most_reviews.each do |album| %>
+      <div class="card">
+        <h3><em><%= link_to album.album_name, album_path(album) %></em></h3>
+
+      </div>
+  <% end %>
+
+
 </div>
