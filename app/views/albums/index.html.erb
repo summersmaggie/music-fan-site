@@ -1,23 +1,24 @@
-<div class="container">
-  <h1>Artists</h1>
+<div class="jumbotron">
+  <p>Artist Fan Site</p>
+</div>
 
-  <p><%= link_to "Add New Album", new_album_path %></p>
+<h1>Click an Artist below to see their Albums:</h1>
 
-
+<div class="container" id="home-artists">
   <% @alphabetize_albums.each do |album| %>
       <div class="card">
         <h3><em><%= link_to album.artist_name, album_path(album) %></em></h3>
 
       </div>
   <% end %>
+</div>
 
-  <h4>Most reviewed albums:</h4>
-  <% @most_reviews.each do |album| %>
-      <div class="card">
-        <h3><em><%= link_to album.album_name, album_path(album) %></em></h3>
-
-      </div>
-  <% end %>
-
-
+<br>
+<div class="album-reviews">
+  <div class="card">
+    <h4>Most reviewed albums:</h4>
+    <% @most_reviews.each do |album| %>
+      <h3><em><%= link_to album.album_name, album_path(album) %></em></h3>
+      <% end %>
+  </div>
 </div>
