@@ -4,7 +4,7 @@
 
 #### _An application for people who love music to add their favorite albums and leave ratings. 4-19-18_
 
-<kbd><img src="app/images/screenshot.png"></kbd>
+<kbd><img src="app/assests/images/screenshot.png"></kbd>
 
 ## Description
 
