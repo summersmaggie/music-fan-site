@@ -1,24 +1,50 @@
-# README
+# Music Fan Club
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### _By Maggie Summers & Kaila Goff_
 
-Things you may want to cover:
+#### _An application for people who love music to add their favorite albums and leave ratings. 4-19-18_
 
-* Ruby version
+<kbd><img src="app/images/screenshot.png"></kbd>
 
-* System dependencies
+## Description
 
-* Configuration
+_This app allows a user to add, update and delete albums, songs and reviews database._
 
-* Database creation
+## Install the DATABASE instructions
 
-* Database initialization
+* _Enter into the terminal:_ ``` $bundle install```
 
-* How to run the test suite
+* _In the following line enter:_ ```$rake db:create```
 
-* Services (job queues, cache servers, search engines, etc.)
+* _In the following line enter:_ ```$rake db:migrate```
 
-* Deployment instructions
+* _In the following line enter:_ ```$rake db:test:prepare```
 
-* ...
+* _In the following line enter:_ ```$rake db:seed```
+
+## Setup/Installation Requirements
+
+  * _Enter in the terminal:_ ``` $rails server```
+
+  * _Using a web browser, type in the url_ ``` localhost:3000 ```
+
+## Known Bugs
+
+  * _No known bugs at this time._
+
+## Support and contact details
+
+  _To suggest changes, submit a pull request in the GitHub repository._
+
+## Technologies Used
+
+  * Ruby
+  * Rails
+  * pSQL
+  * ActiveRecord
+
+### License
+
+  *MIT License*
+
+Copyright (c) 2018 **_Maggie Summers, Kaila Goff_**
